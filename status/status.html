@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+
+<html>
+  <head>
+    <title>Server Status</title>
+    <style>
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #020514;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  transform: translateZ(0);
+}
+
+.status:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: animate 1.5s linear infinite;
+  transform-origin: center;
+  filter: blur(20px);
+}
+
+.status .label {
+  margin-right: 1rem;
+}
+
+.status .value {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.status.safe {
+  background-color: #4caf50;
+}
+
+.status.unsafe {
+  background-color: #f44336;
+}
+
+.status.online {
+  background-color: #2196f3;
+}
+
+.status.offline {
+  background-color: #9e9e9e;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+</style>
+  </head>
+  <body>
+    <img src="https://cdn.discordapp.com/attachments/1089596726345740388/1094309616164282480/static.png" alt="Your Logo" width="150" height="150">
+    <h1>Welcome To Basement's Room 4</h1>
+    <div class="status safe">
+      <span class="label">FDP Configs:</span>
+      <span class="value">Safe</span>
+    </div>
+    <div class="status safe">
+      <span class="label">Duckware Configs:</span>
+      <span class="value">Safe</span>
+    </div>
+    <div class="status unsafe">
+      <span class="label">NIGHTX CONFIGS:</span>
+      <span class="value">Kinda Safe</span>
+    </div>
+    <div class="status unsafe">
+      <span class="label">CrossSine CONFIGS:</span>
+      <span class="value">Kinda Safe</span>
+    </div>
+    <div class="status unsafe">
+      <span class="label">Augustus CONFIGS:</span>
+      <span class="value">Kinda Safe</span>
+    </div>
+</style>
+</head>
+<body>
+  <script>
+    // toggle between safe and unsafe status for pika config
+// toggle between safe and unsafe status for pika config
+const pikaConfig = document.querySelector('.status.safe');
+pikaConfig.addEventListener('click', function() {
+  pikaConfig.classList.toggle('unsafe');
+  if (pikaConfig.classList.contains('unsafe')) {
+    pikaConfig.querySelector('.value').textContent = 'Unsafe';
+  } else {
+    pikaConfig.querySelector('.value').textContent = 'Safe';
+  }
+});

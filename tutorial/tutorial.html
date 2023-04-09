@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tutorials</title>
+	<style>
+		body {
+			background-color: #020514;
+			color: white;
+			font-family: Arial, sans-serif;
+			text-align: center;
+			margin-top: 100px;
+		}
+		h1 {
+			font-size: 3rem;
+		}
+		.container {
+			margin-top: 50px;
+		}
+		.btn {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border-radius: 5px;
+			transition: all 0.3s ease-in-out;
+		}
+		.btn:hover {
+			background-color: #3e8e41;
+			transform: translateY(-2px);
+			box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+		}
+		.video-container {
+			margin-top: 50px;
+			position: relative;
+			padding-bottom: 56.25%;
+			padding-top: 30px;
+			height: 0;
+			overflow: hidden;
+		}
+		.video-container iframe,  
+		.video-container object,  
+		.video-container embed,
+		.video-container video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.go-back-button {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+		.logo {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			background-image: url("https://cdn.discordapp.com/attachments/1087640916656930847/1094517498969329798/3683641.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			margin-right: 10px;
+		}
+		.back-text {
+			display: inline-block;
+			font-size: 1.2rem;
+			vertical-align: middle;
+		}
+	</style>
+</head>
+<body>
+    
+	<div class="container">
+		<h1>Welcome To Basement's Room 3</h1>
+		<h2>1 - How To Use Clients</h2>
+        <button class="btn" onclick="window.location.href='https://youtu.be/nH7zOpOvKj0'">Watch on YouTube</button>
+    </div>
+
+    <div class="go-back-button">
+        <a href="https://dungeongang.github.io" class="logo"></a>
+        <span class="back-text"></span>
+        </div>
+        <div class="container">
+            <h2>2 - How To Extract Zip Files</h2>
+            <button class="btn" onclick="window.location.href='https://youtu.be/bnM-WhO-ZPk'">Watch on YouTube</button>
+        </div>
+        
+        <script>
+            // Get the button and video container elements for tutorial 1
+            const youtubeButton1 = document.getElementById('go-to-youtube1');
+            const videoContainer1 = youtubeButton1.nextElementSibling;
+        
+            // Add an event listener to the button for tutorial 1
+            youtubeButton1.addEventListener('click', () => {
+                // Hide the tutorial buttons container for tutorial 1
+                youtubeButton1.parentElement.style.display = 'none';
+                // Show the video container for tutorial 1
+                videoContainer1.style.display = 'block';
+                // Set the source of the iframe to the YouTube video URL for tutorial 1
+                videoContainer1.querySelector('iframe').src = 'https://www.youtube.com/embed/nH7zOpOvKj0';
+            });
+        
+            // Get the button and video container elements for tutorial 2
+            const youtubeButton2 = document.getElementById('go-to-youtube2');
+            const videoContainer2 = youtubeButton2.nextElementSibling;
+        
+            // Add an event listener to the button for tutorial 2
+            youtubeButton2.addEventListener('click', () => {
+                // Hide the tutorial buttons container for tutorial 2
+                youtubeButton2.parentElement.style.display = 'none';
+                // Show the video container for tutorial 2
+                videoContainer2.style.display = 'block';
+                // Set the source of the iframe to the YouTube video URL for tutorial 2
+                videoContainer2.querySelector('iframe').src = 'https://www.youtube.com/embed/bnM-WhO-ZPk';
+            });
+        
+            // Get the go-back button elements
+            const goBackButton = document.querySelector('.go-back-button');
+            const backText = goBackButton.querySelector('.back-text');
+        
+            // Add an event listener to the go-back button
+            goBackButton.addEventListener('click', () => {
+                // Hide the video container for tutorial 1
+                videoContainer1.style.display = 'none';
+                // Show the tutorial buttons container for tutorial 1
+                youtubeButton1.parentElement.style.display = 'block';
+                // Reset the source of the iframe to an empty string for tutorial 1
+                videoContainer1.querySelector('iframe').src = '';
+        
+                // Hide the video container for tutorial 2
+                videoContainer2.style.display = 'none';
+                // Show the tutorial buttons container for tutorial 2
+                youtubeButton2.parentElement.style.display = 'block';
+                // Reset the source of the iframe to an empty string for tutorial 2
+                videoContainer2.querySelector('iframe').src = '';
+            });
+        
+            // Set the text of the back button
+            backText.innerText = 'Go back to main page';
+        </script>
+</body>
+</html>        

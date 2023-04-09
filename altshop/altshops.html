@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alt Shops</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <style>
+      /* General Styles */
+      body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #75638a;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 50px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 48px;
+        margin-bottom: 50px;
+        color: #282828;
+      }
+
+      /* Discord Server Cards */
+      .server-card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        overflow: hidden;
+        transition: transform 0.2s ease-in-out;
+        width: 350px;
+      }
+
+      .server-card:hover {
+        transform: scale(1.05);
+      }
+
+      .server-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .server-card h2 {
+        font-size: 24px;
+        margin: 20px;
+        color: #282828;
+      }
+
+      .server-card p {
+        font-size: 16px;
+        margin: 20px;
+        color: #6f6f6f;
+        height: 60px;
+        overflow: hidden;
+      }
+
+      .server-card a {
+        background-color: #7289DA;
+        border-radius: 5px;
+        color: white;
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.2s ease-in-out;
+        width: 200px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .server-card a:hover {
+        background-color: #546E7A;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Shops</h1>
+
+    <div class="container">
+      <div class="server-card">
+        <img src="https://cdn.discordapp.com/attachments/1093895680067645450/1094567369948528740/EresrZE.png" alt="Server 1">
+        <h2>Azure Alts</h2>
+        <p>A description of Server 1 that is long enough to span multiple lines and showcase the overflow hidden feature of the card.</p>
+        <a href="https://discord.gg/s2CfUr26xx">Join Azure Alts</a>
+        <a href="https://bit.ly/AzureAlts">Go To Website</a>
+      </div>
+
+      <div class="server-card">
+        <img src="https://cdn.discordapp.com/attachments/1069115883378716743/1094568155864637490/5df4069e2a7e8d24ed3ecfbb37e831ee.png" alt="Server 2">
+        <h2>Ore Shop</h2>
+        <p>A description of Server 2 that is also long enough to showcase the overflow hidden feature of the card.</p>
+        <a href="https://discord.gg/mzrBvNuWm2">Join Ore Shop</a>
+        <a href="https://shoppy.gg/@OreOriginal">Go To Website</a>
+      </div>
